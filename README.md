@@ -1,27 +1,31 @@
 # Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+###Problem
+```
+ให้สร้าง Project Angular เพื่อออกแบบ form 1 form  โดยให้ render หน้าฟอร์มตาม Schema ของ Json ด้านล่าง โดยสร้างเป็น control 2 ชุดที่เหมือนกัน ชุดแรกสำหรับ input และชุดที่2 ข้อมูลจะเปลี่ยนตามชุดแรกแบบทันทีที่มีการแก้ไขข้อมูลชุดที่1 (หากมี tools ที่ต้องการใช้ download ได้เลย)
+อธิบายเพิ่มเติม : ให้นำ Jsonเป็น Inputในการนำไป rendor หน้าจอ โดยเมื่อต้องการเปลี่ยนแปลง form สามารถมาแก้ที่ Json ได้ เช่น เพิ่ม textbox เข้าไปอีก 1 อัน จะต้องสามารถเพิ่มได้ผ่าน Json
+Json Data :
+{
+	“form”: [
+	    {
+              “id”: “name”
+              “value”: “”,
+              “type”: “text”
+	    },
+	    {
+              “id”: “email”
+              “value”: “”,
+              “type”: “text”
+	    },
+	    {
+              “id”: “gender”,
+              “value”: “male”,
+              “type”: “radio”
+	    }
+	]
+}
+```
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

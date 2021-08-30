@@ -1,0 +1,33 @@
+<div class="w-50 m-5" [formGroup]="firstForm">
+  <h3>First control</h3>
+  <div *ngFor="let form of formArray;let i = index" class="my-3">
+    <div [ngSwitch]="form.type">
+      <div *ngSwitchCase="'text'">
+        <input class="form-control" [type]="form.type" [formControlName]="form.id">
+      </div>
+      <div *ngSwitchCase="'radio'">
+        <input class="form-check-input" [type]="form.type"
+          [checked]="firstForm.value[form.id] === form.value"
+          [formControlName]="form.id" [id]="form.id">
+        <label class="form-check-label" [for]="form.id">{{form.value}}</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-50 m-5" [formGroup]="secondForm">
+  <h3>Second control</h3>
+  <div *ngFor="let form of formArray;let i = index" class="my-3">
+    <div [ngSwitch]="form.type">
+      <div *ngSwitchCase="'text'">
+        <input class="form-control" readonly [type]="form.type" [value]="secondForm.value[form.id]">
+      </div>
+      <div *ngSwitchCase="'radio'">
+        <input class="form-check-input" readonly [type]="form.type"
+          [checked]="secondForm.value[form.id] === form.value"
+          [value]="secondForm.value[form.id]" [id]="form.id">
+        <label class="form-check-label" [for]="form.id">{{form.value}}</label>
+      </div>
+    </div>
+  </div>
+</div>
